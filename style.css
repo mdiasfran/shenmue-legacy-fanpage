@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=KouzanBrush+Font&family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;500;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: #1b2029;
+	--secondary-color: #dcd8d8;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: var(--primary-color);
+}
+
+/* HEADER */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 25px;
+}
+
+.buttons-nav {
+	display: flex;
+	align-items: center;
+}
+
+.button-nav {
+	height: 80px;
+	width: 80px;
+	font-size: 25px;
+	font-weight: 700;
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 50%;
+	margin: 0 20px;
+}
+
+.a-button:hover {
+	background-color: #eb3c36;
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+.b-button:hover {
+	background-color: #2874de;
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+.y-button:hover {
+	background-color: #74cca2;
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+.button-play-now:hover {
+	cursor: pointer;
+	transform: scale(1.1) rotate(5deg) translateX(10px);
+	transition: transform 0.5s ease;
+}
+
+/* MAIN SWIPER */
+
+.swiper {
+	width: 100vw;
+	height: 700px;
+}
+
+.swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* WUDE */
+
+.wudes {
+	padding: 50px 20px;
+	background-color: #f4f1e0;
+	text-align: center;
+}
+
+.wudes h2 {
+	font-size: 2.5em;
+	margin-bottom: 30px;
+	color: #333;
+	font-family: 'Noto Serif JP', serif;
+}
+
+.wude-infos {
+	width: 80%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.wude-paragraph {
+	font-size: 1.2em;
+	margin-bottom: 20px;
+	color: #333;
+	font-family: 'Merriweather', serif;
+}
+
+.card-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+/* CARDS AMARELADOS */
+
+.wude-card {
+	width: 300px;
+	height: 400px;
+	perspective: 1000px;
+	position: relative;
+}
+
+.card-front,
+.card-back {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	border: 2px solid #c5b48f;
+	border-radius: 10px;
+	padding: 10px;
+	backface-visibility: hidden;
+	transition: transform 0.6s;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+	font-family: 'Caveat', cursive;
+	background-color: #fff8e1;
+	background-image: linear-gradient(to bottom, #c8b59f 2px, transparent 2px);
+	background-size: 100% 24px;
+}
+
+.card-front img {
+	width: 150px;
+	height: 150px;
+}
+
+.card-front {
+	transform: rotateY(0deg);
+}
+
+.card-back {
+	transform: rotateY(180deg);
+}
+
+.wude-card:hover .card-front {
+	transform: rotateY(-180deg);
+	transition: transform 1.3s;
+	cursor: pointer;
+}
+
+.wude-card:hover .card-back {
+	transform: rotateY(0deg);
+	transition: transform 1s;
+	cursor: pointer;
+}
+
+/* conteúdo dos cards */
+.wude-card h3 {
+	font-size: 1.7em;
+	margin-bottom: 10px;
+}
+
+.wude-card p {
+	font-size: 1.4em;
+	line-height: 1.5;
+}
+
+/* QTE */
+
+.qte-container {
+	padding: 50px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.qte-infos {
+	width: 500px;
+	color: #fff;
+	font-size: 1.2em;
+	margin-right: 50px;
+}
+
+.arcade-machine {
+	border: 10px solid #fff;
+	border-radius: 15px;
+	padding: 20px;
+	background: linear-gradient(135deg, #444, #555);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-alert {
+	background-color: #f8d7da; /* Cor de fundo para alerta */
+	color: #721c24; /* Cor do texto */
+	padding: 15px;
+	border: 1px solid #f5c6cb; /* Borda do alerta */
+	border-radius: 5px; /* Bordas arredondadas */
+	text-align: center;
+	margin: 20px 0; /* Espaço em volta do alerta */
+}
+
+.controls {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #555;
+	color: white;
+	font-size: 24px;
+	line-height: 60px;
+	text-align: center;
+	margin: 5px;
+	transition: background-color 0.3s;
+}
+
+.button:hover {
+	background-color: #777;
+}
+
+.controls {
+	margin-top: 20px;
+}
+
+button {
+	background-color: #27ae60;
+	color: white;
+	padding: 10px 20px;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#scoreBoard {
+	margin-top: 10px;
+	font-size: 22px;
+	color: white;
+}
+
+/* QTE CHAMADA */
+
+.qte-highlight {
+	margin-top: 20px;
+	padding: 15px 25px;
+	background-color: #ffdd57;
+	color: #1b2029;
+	border-left: 5px solid #ff3300;
+	border-radius: 5px;
+	font-size: 1.1em;
+	font-weight: bold;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	font-family: 'Roboto', sans-serif;
+}
+
+.qte-highlight:hover {
+	background-color: #ffd633;
+	transform: translateY(-2px);
+	transition: all 0.3s ease;
+}
+
+/* DEPOIMENTOS */
+
+.testimonials {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 0;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.testimonial {
+	margin: 20px 0;
+	width: 80%;
+	max-width: 800px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 2px solid #ccc;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+}
+
+.testimonial-content {
+	display: flex;
+	align-items: center;
+}
+
+.testimonial-photo {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 5px solid white;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+
+.testimonial-text {
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+
+.testimonial-name {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.testimonial-message {
+	font-size: 1em;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 10px;
+	border-radius: 5px;
+	font-family: 'Press Start 2P', cursive;
+}
+
+/* FORMULARIO */
+.contact-container {
+	padding: 50px 20px;
+	background-color: #1b2029;
+	text-align: center;
+}
+
+.contact-infos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px;
+	border-radius: 15px;
+	max-width: 600px;
+	margin: 0 auto;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contact-infos h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.form-group {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 16px;
+}
+
+.form-group label {
+	flex: 1;
+	flex-wrap: nowrap;
+	padding: 10px;
+	font-size: 1.2em;
+	color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 70%;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.status-icon {
+	font-size: 20px;
+	color: limegreen;
+	margin-left: 10px;
+	visibility: hidden;
+}
+
+#send-button {
+	height: 70px;
+	width: 70px;
+	font-size: 25px;
+	font-weight: 700;
+	color: var(--primary-color);
+	background-color: #eb3c36;
+	border: none;
+	border-radius: 50%;
+	margin: 0 20px;
+}
+
+#send-button:hover {
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
+
+/* FOOTER */
+
+.footer {
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 20px;
+	text-align: center;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-content p {
+	color: #fff;
+	font-size: 1em;
+}
+
+.gashapon-icon {
+	display: inline-block;
+	transition: transform 0.5s ease;
+}
+
+.gashapon-icon img {
+	width: 50px;
+	height: 50px;
+}
+
+.gashapon-icon:hover {
+	transform: rotate(360deg);
+}
+
+/* SCROLL ESTILO */
+
+::-webkit-scrollbar {
+	width: 3px;
+	height: 3px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+	padding: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #000;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+	header {
+		flex-direction: column;
+		align-items: center; /* Centraliza os itens */
+		padding: 15px; /* Espaçamento adequado no header */
+	}
+
+	.buttons-nav {
+		flex-direction: row;
+		margin-bottom: 10px;
+		justify-content: center; /* Centraliza os botões */
+	}
+
+	.button-nav {
+		height: 50px; /* Altura ajustada */
+		width: 50px; /* Largura ajustada */
+		font-size: 18px; /* Tamanho da fonte ajustado */
+		margin: 0 5px; /* Margem entre os botões */
+	}
+
+	.swiper {
+		height: 300px; /* Altura do swiper reduzida */
+	}
+
+	.wudes,
+	.qte-container,
+	.testimonials,
+	.contact-container {
+		padding: 20px 10px; /* Reduzir padding em seções */
+	}
+
+	.wude-card {
+		width: 100%; /* Largura total para cards */
+		max-width: 280px; /* Limitar a largura máxima */
+		margin: 10px auto; /* Centraliza os cards com margem */
+	}
+
+	.qte-infos {
+		width: 100%; /* Ajustar a largura para telas menores */
+		margin-right: 0; /* Remover margem à direita */
+		margin-bottom: 10px; /* Espaço abaixo dos elementos */
+	}
+
+	.arcade-machine {
+		width: 100%; /* Ajustar arcade machine */
+		padding: 10px; /* Reduzir padding */
+		margin-bottom: 15px; /* Espaço abaixo da imagem */
+	}
+
+	.testimonial {
+		width: 90%; /* Ampliar largura de depoimentos */
+		margin: 10px auto; /* Centraliza os depoimentos com margem */
+	}
+}
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+	header {
+		padding: 10px 15px; /* Reduzir padding do header */
+	}
+
+	.logo {
+		width: 100px; /* Reduzir o tamanho do logo */
+		margin-bottom: 10px; /* Espaço abaixo do logo */
+	}
+
+	.button-play-now {
+		width: 90%; /* Botão "Play Now" mais responsivo */
+		max-width: 200px; /* Limitar a largura máxima */
+		margin: 10px auto; /* Centralizar botão com margem */
+		padding: 10px; /* Ajustar o padding do botão */
+	}
+
+	button {
+		width: 100%; /* Botões ocuparem toda a largura */
+		padding: 12px; /* Ajustar o padding dos botões */
+		margin-bottom: 10px; /* Espaço abaixo dos botões */
+	}
+
+	.form-group {
+		width: 100%; /* Garantir que os grupos de formulário ocupem toda a largura */
+		margin-bottom: 10px; /* Espaço entre os grupos de formulário */
+	}
+}
