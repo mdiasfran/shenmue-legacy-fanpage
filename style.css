@@ -194,13 +194,19 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	gap: 30px;
 }
 
 .qte-infos {
 	width: 500px;
 	color: #fff;
 	font-size: 1.2em;
-	margin-right: 50px;
+}
+
+.arcade-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .arcade-machine {
@@ -212,13 +218,13 @@ header {
 }
 
 .mobile-alert {
-	background-color: #f8d7da; /* Cor de fundo para alerta */
-	color: #721c24; /* Cor do texto */
+	background-color: #f8d7da;
+	color: #721c24;
 	padding: 15px;
-	border: 1px solid #f5c6cb; /* Borda do alerta */
-	border-radius: 5px; /* Bordas arredondadas */
+	border: 1px solid #f5c6cb;
+	border-radius: 5px;
 	text-align: center;
-	margin: 20px 0; /* Espaço em volta do alerta */
+	margin: 20px 0;
 }
 
 .controls {
@@ -466,88 +472,192 @@ button {
 	background-color: #000;
 }
 
-/* Mobile Styles */
+/* RESPONSIVIDADE */
+
 @media (max-width: 768px) {
 	header {
 		flex-direction: column;
-		align-items: center; /* Centraliza os itens */
-		padding: 15px; /* Espaçamento adequado no header */
+		align-items: center;
+		padding: 15px;
 	}
 
 	.buttons-nav {
 		flex-direction: row;
 		margin-bottom: 10px;
-		justify-content: center; /* Centraliza os botões */
+		justify-content: center;
 	}
 
 	.button-nav {
-		height: 50px; /* Altura ajustada */
-		width: 50px; /* Largura ajustada */
-		font-size: 18px; /* Tamanho da fonte ajustado */
-		margin: 0 5px; /* Margem entre os botões */
+		height: 50px;
+		width: 50px;
+		font-size: 18px;
+		margin: 0 5px;
 	}
 
 	.swiper {
-		height: 300px; /* Altura do swiper reduzida */
+		height: 300px;
 	}
 
 	.wudes,
 	.qte-container,
 	.testimonials,
 	.contact-container {
-		padding: 20px 10px; /* Reduzir padding em seções */
+		padding: 20px 10px;
 	}
 
 	.wude-card {
-		width: 100%; /* Largura total para cards */
-		max-width: 280px; /* Limitar a largura máxima */
-		margin: 10px auto; /* Centraliza os cards com margem */
+		width: 100%;
+		max-width: 280px;
+		margin: 10px auto;
+	}
+
+	.qte-container {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 20px;
 	}
 
 	.qte-infos {
-		width: 100%; /* Ajustar a largura para telas menores */
-		margin-right: 0; /* Remover margem à direita */
-		margin-bottom: 10px; /* Espaço abaixo dos elementos */
+		width: 100%;
+		margin-right: 0;
 	}
 
 	.arcade-machine {
-		width: 100%; /* Ajustar arcade machine */
-		padding: 10px; /* Reduzir padding */
-		margin-bottom: 15px; /* Espaço abaixo da imagem */
+		width: 100%;
+		max-width: 350px;
 	}
 
-	.testimonial {
-		width: 90%; /* Ampliar largura de depoimentos */
-		margin: 10px auto; /* Centraliza os depoimentos com margem */
-	}
-}
-
-/* Extra Small Devices */
-@media (max-width: 576px) {
-	header {
-		padding: 10px 15px; /* Reduzir padding do header */
-	}
-
-	.logo {
-		width: 100px; /* Reduzir o tamanho do logo */
-		margin-bottom: 10px; /* Espaço abaixo do logo */
-	}
-
-	.button-play-now {
-		width: 90%; /* Botão "Play Now" mais responsivo */
-		max-width: 200px; /* Limitar a largura máxima */
-		margin: 10px auto; /* Centralizar botão com margem */
-		padding: 10px; /* Ajustar o padding do botão */
+	#gameCanvas {
+		width: 100%;
+		height: auto;
 	}
 
 	button {
-		width: 100%; /* Botões ocuparem toda a largura */
-		padding: 12px; /* Ajustar o padding dos botões */
-		margin-bottom: 10px; /* Espaço abaixo dos botões */
+		width: 100%;
+	}
+
+	.controls {
+		margin-top: 15px;
+	}
+}
+
+.testimonial {
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;
+}
+
+.testimonial-content {
+	flex-direction: column;
+	text-align: center;
+}
+
+.testimonial-photo {
+	width: 80px;
+	height: 80px;
+	margin-right: 0;
+	margin-bottom: 15px;
+}
+
+.testimonial-text {
+	font-size: 1em;
+}
+
+.testimonial-name {
+	font-size: 1.1em;
+}
+
+.testimonial-message {
+	font-size: 0.9em;
+	padding: 8px;
+}
+
+@media (max-width: 576px) {
+	header {
+		padding: 10px 15px;
+	}
+
+	.logo {
+		width: 100px;
+		margin-bottom: 10px;
+	}
+
+	.button-play-now {
+		width: 90%;
+		max-width: 200px;
+		margin: 10px auto;
+		padding: 10px;
+	}
+
+	button {
+		width: 100%;
+		padding: 12px;
+		margin-bottom: 10px;
 	}
 
 	.form-group {
-		width: 100%; /* Garantir que os grupos de formulário ocupem toda a largura */
-		margin-bottom: 10px; /* Espaço entre os grupos de formulário */
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.qte-container {
+		padding: 20px;
+	}
+
+	.qte-infos {
+		font-size: 1em;
+	}
+
+	.arcade-machine {
+		max-width: 300px;
+	}
+
+	.qte-highlight {
+		font-size: 1em;
+		padding: 10px 20px;
+	}
+
+	.testimonials {
+		padding: 30px 0;
+	}
+
+	.testimonial {
+		width: 90%;
+	}
+
+	.testimonial-name {
+		font-size: 1em;
+	}
+
+	.testimonial-message {
+		font-size: 0.85em;
+		padding: 6px;
+	}
+
+	.testimonial-photo {
+		width: 70px;
+		height: 70px;
+	}
+
+	.contact-infos h2 {
+		font-size: 1.5em;
+	}
+
+	.form-group input {
+		font-size: 1em;
+		padding: 8px;
+	}
+
+	.form-group label {
+		font-size: 1em;
+	}
+
+	#send-button {
+		height: 50px;
+		width: 50px;
+		font-size: 18px;
 	}
 }
